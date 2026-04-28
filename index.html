@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investment Website Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-accent accent-1"></div>
+    <div class="bg-accent accent-2"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#">Your Investment Brand</a>
+        <nav class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a>
+        </nav>
+        <button class="nav-button">Get Started</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="tag">Investment Template</p>
+            <h1>Your Main Headline Goes Here</h1>
+            <p class="subtext">
+              This is a placeholder section for your introduction. Share your
+              value proposition once you're ready.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#">Primary Action</a>
+              <a class="btn btn-secondary" href="#">Secondary Action</a>
+            </div>
+          </div>
+          <div class="card stat-card">
+            <p class="card-label">Highlight Card</p>
+            <h2>Key Metric Placeholder</h2>
+            <p>
+              Keep this card for future investment stats, milestones, or summary
+              points.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="container">
+          <h2>Section Title Placeholder</h2>
+          <div class="grid three-col">
+            <article class="card">
+              <h3>Card One</h3>
+              <p>Add your first content block here.</p>
+            </article>
+            <article class="card">
+              <h3>Card Two</h3>
+              <p>Add your second content block here.</p>
+            </article>
+            <article class="card">
+              <h3>Card Three</h3>
+              <p>Add your third content block here.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block alt">
+        <div class="container split">
+          <div>
+            <h2>Another Placeholder Section</h2>
+            <p>
+              Use this area for details like process, strategy, trust signals,
+              or future expansion.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Content Box</h3>
+            <p>Space reserved for your custom text and data.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> Your Investment Brand</p>
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
