@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Investment Website Template</title>
+    <title>FinGrow</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,93 +18,181 @@
 
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#">Your Investment Brand</a>
+        <a class="brand" href="#">FinGrow</a>
         <nav class="nav-links">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Contact</a>
+          <a href="#planner">Planner</a>
+          <a href="#learn">Learn</a>
         </nav>
-        <button class="nav-button">Get Started</button>
       </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <p class="tag">Investment Template</p>
-            <h1>Your Main Headline Goes Here</h1>
-            <p class="subtext">
-              This is a placeholder section for your introduction. Share your
-              value proposition once you're ready.
-            </p>
-            <div class="cta-row">
-              <a class="btn btn-primary" href="#">Primary Action</a>
-              <a class="btn btn-secondary" href="#">Secondary Action</a>
-            </div>
-          </div>
-          <div class="card stat-card">
-            <p class="card-label">Highlight Card</p>
-            <h2>Key Metric Placeholder</h2>
-            <p>
-              Keep this card for future investment stats, milestones, or summary
-              points.
-            </p>
-          </div>
+    <main class="container main-content">
+      <section class="intro">
+        <p class="tag">By: Reyan Handa</p>
+        <h1>Split Your Pocket Money Into 8 Financial Accounts</h1>
+        <p>
+          Enter your total pocket money (for example, ₹500) and divide it into
+          eight accounts either by filling your own percentages or using a
+          ready-made recommendation.
+        </p>
+      </section>
+
+      <section id="planner" class="card section-card">
+        <div class="tabs" role="tablist" aria-label="Planning options">
+          <button class="tab-btn active" data-tab="custom" role="tab" aria-selected="true">Custom Form</button>
+          <button class="tab-btn" data-tab="recommended" role="tab" aria-selected="false">Press to see the recommended version</button>
+          <button class="tab-btn" data-tab="learn" role="tab" aria-selected="false">What Is Financial Planning?</button>
+        </div>
+
+        <div class="tab-panel active" id="custom" role="tabpanel">
+          <h2>Custom Financial Split</h2>
+          <form id="customForm">
+            <label for="amount">Total Pocket Money (₹)</label>
+            <input id="amount" name="amount" type="number" min="1" value="500" required />
+
+            <div id="accountsGrid" class="accounts-grid"></div>
+
+            <button class="btn btn-primary" type="submit">Your Recommend Split</button>
+            <p class="helper" id="customMessage"></p>
+          </form>
+        </div>
+
+        <div class="tab-panel" id="recommended" role="tabpanel">
+          <h2>Recommended Financial Split</h2>
+          <p class="helper">Balanced starter plan for students and beginners.</p>
+          <form id="recommendedForm" class="recommended-form">
+            <label for="recommendedAmount">Total Pocket Money (₹)</label>
+            <input id="recommendedAmount" name="recommendedAmount" type="number" min="1" value="500" required />
+            <button class="btn btn-primary" type="submit">Press to see the recommended version</button>
+          </form>
+          <div id="recommendedList" class="recommended-list"></div>
+        </div>
+
+        <div class="tab-panel" id="learn" role="tabpanel">
+          <h2>What Is Financial Planning?</h2>
+          <p>
+            Financial planning is planning your money for the future. In financial planning you will organise your money to be in different accounts.
+            They vary based on the person with the most common ones being savings accounts, emergency accounts, investing accounts, salary accounts,
+            retirement accounts and tax saving accounts. These accounts help you stay organised and productive.
+          </p>
+          <p>
+            People have many steps for financial planning. The most common six are to set up a good and stable finance account and set goals for the
+            future. Individuals then set up insurance, tax returns and more. This allows you to get an idea about your income and your budget.
+          </p>
+          <p>
+            You will have to have financial goals and categorise them like short, medium and long-term. This helps people work effectively and have
+            productive goals. The most important step is creating a budget. You have to have a budget for investing and for your goals after calculating
+            the cost and debt for long-term and short-term goals.
+          </p>
+          <p>
+            You also need an emergency fund where you keep a certain amount in options like fixed deposits, high-yield savings accounts, and money market
+            accounts. Investing is key to financial planning, but there are risks and benefits, so safeguarding your investments is the safest option.
+          </p>
         </div>
       </section>
 
-      <section class="section-block">
-        <div class="container">
-          <h2>Section Title Placeholder</h2>
-          <div class="grid three-col">
-            <article class="card">
-              <h3>Card One</h3>
-              <p>Add your first content block here.</p>
-            </article>
-            <article class="card">
-              <h3>Card Two</h3>
-              <p>Add your second content block here.</p>
-            </article>
-            <article class="card">
-              <h3>Card Three</h3>
-              <p>Add your third content block here.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-block alt">
-        <div class="container split">
-          <div>
-            <h2>Another Placeholder Section</h2>
-            <p>
-              Use this area for details like process, strategy, trust signals,
-              or future expansion.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Content Box</h3>
-            <p>Space reserved for your custom text and data.</p>
-          </div>
-        </div>
+      <section class="card section-card">
+        <h2>Your Recommended Accounts</h2>
+        <div id="bubbleArea" class="bubble-area"></div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-wrap">
-        <p>© <span id="year"></span> Your Investment Brand</p>
-        <div class="footer-links">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">LinkedIn</a>
-        </div>
-      </div>
-    </footer>
-
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+      const accountDefaults = [
+        { name: "Spending / Checking Account", percent: 15 },
+        { name: "Savings Account", percent: 10 },
+        { name: "Emergency Fund", percent: 15 },
+        { name: "Fixed Deposits (FDs)", percent: 15 },
+        { name: "Mutual Funds / Investments", percent: 25 },
+        { name: "Retirement (PPF/Pension)", percent: 10 },
+        { name: "Insurance (ULIP/Term Insurance)", percent: 5 },
+        { name: "Charity / Giving", percent: 5 },
+      ];
+
+      const accountsGrid = document.getElementById("accountsGrid");
+      const bubbleArea = document.getElementById("bubbleArea");
+      const customMessage = document.getElementById("customMessage");
+      const recommendedList = document.getElementById("recommendedList");
+
+      accountDefaults.forEach((account, index) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "account-input";
+        wrapper.innerHTML = `
+          <label>Account ${index + 1} Name</label>
+          <input type="text" name="name-${index}" value="${account.name}" required />
+          <label>Percentage (%)</label>
+          <input type="number" name="percent-${index}" min="0" max="100" value="${account.percent}" required />
+        `;
+        accountsGrid.appendChild(wrapper);
+      });
+
+      function renderBubbles(amount, accounts) {
+        bubbleArea.innerHTML = "";
+        accounts.forEach((account) => {
+          const value = (amount * account.percent) / 100;
+          const bubble = document.createElement("article");
+          bubble.className = "bubble";
+          bubble.innerHTML = `
+            <h3>${account.name}</h3>
+            <p>${account.percent}%</p>
+            <strong>₹${value.toFixed(2)}</strong>
+          `;
+          bubbleArea.appendChild(bubble);
+        });
+      }
+
+      document.getElementById("customForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const amount = Number(document.getElementById("amount").value);
+        const accounts = [];
+        let totalPercent = 0;
+
+        for (let i = 0; i < 8; i += 1) {
+          const name = event.target[`name-${i}`].value.trim();
+          const percent = Number(event.target[`percent-${i}`].value);
+          accounts.push({ name: name || `Account ${i + 1}`, percent });
+          totalPercent += percent;
+        }
+
+        if (totalPercent !== 100) {
+          customMessage.textContent = `Your percentages add up to ${totalPercent}%. Please make it exactly 100%.`;
+          customMessage.classList.add("error");
+          return;
+        }
+
+        customMessage.textContent = "Perfect! Your custom plan has been created.";
+        customMessage.classList.remove("error");
+        renderBubbles(amount, accounts);
+      });
+
+      document.getElementById("recommendedForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const amount = Number(document.getElementById("recommendedAmount").value);
+        renderBubbles(amount, accountDefaults);
+
+        recommendedList.innerHTML = accountDefaults
+          .map((account) => `<p><strong>${account.name}</strong>: ${account.percent}% (₹${((amount * account.percent) / 100).toFixed(2)})</p>`)
+          .join("");
+      });
+
+      document.querySelectorAll(".tab-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          const target = button.dataset.tab;
+
+          document.querySelectorAll(".tab-btn").forEach((btn) => {
+            btn.classList.remove("active");
+            btn.setAttribute("aria-selected", "false");
+          });
+
+          document.querySelectorAll(".tab-panel").forEach((panel) => panel.classList.remove("active"));
+
+          button.classList.add("active");
+          button.setAttribute("aria-selected", "true");
+          document.getElementById(target).classList.add("active");
+        });
+      });
+
+      renderBubbles(500, accountDefaults);
     </script>
   </body>
 </html>
