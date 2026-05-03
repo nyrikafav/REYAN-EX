@@ -63,7 +63,7 @@
           <form id="recommendedForm" class="recommended-form">
             <label for="recommendedAmount">Total Pocket Money (₹)</label>
             <input id="recommendedAmount" name="recommendedAmount" type="number" min="1" value="500" required />
-            <button class="btn btn-primary" type="submit">Show Recommended Bubbles</button>
+            <button class="btn btn-primary" type="submit">Press to see the recommended version</button>
           </form>
           <div id="recommendedList" class="recommended-list"></div>
         </div>
@@ -92,21 +92,21 @@
       </section>
 
       <section class="card section-card">
-        <h2>Your 8 Account Bubbles</h2>
+        <h2>Your Recommended Accounts</h2>
         <div id="bubbleArea" class="bubble-area"></div>
       </section>
     </main>
 
     <script>
       const accountDefaults = [
-        { name: "Savings", percent: 20 },
-        { name: "Emergency", percent: 15 },
-        { name: "Investing", percent: 15 },
-        { name: "Daily Spending", percent: 20 },
-        { name: "Education", percent: 10 },
-        { name: "Family Support", percent: 8 },
-        { name: "Fun", percent: 7 },
-        { name: "Goals", percent: 5 },
+        { name: "Spending / Checking Account", percent: 15 },
+        { name: "Savings Account", percent: 10 },
+        { name: "Emergency Fund", percent: 15 },
+        { name: "Fixed Deposits (FDs)", percent: 15 },
+        { name: "Mutual Funds / Investments", percent: 25 },
+        { name: "Retirement (PPF/Pension)", percent: 10 },
+        { name: "Insurance (ULIP/Term Insurance)", percent: 5 },
+        { name: "Charity / Giving", percent: 5 },
       ];
 
       const accountsGrid = document.getElementById("accountsGrid");
